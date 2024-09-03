@@ -65,6 +65,7 @@ public class ClientDao implements IClientDao{
             rs = ps.executeQuery();
             
             if(rs.next()){
+                
                 client.setName(rs.getString("Name"));
                 client.setSurname(rs.getString("Surname"));
                 client.setMembresy(rs.getString("Membresy"));
