@@ -21,6 +21,7 @@ public class ClientService {
         System.out.println("**MENU DE OPCIONES**");
         Scanner input = new Scanner(System.in);
         String option = "";
+        boolean loop = true;
         do{
             System.out.println("1. Listar Clientes");
             System.out.println("2. Buscar Cliente por ID");
@@ -53,8 +54,15 @@ public class ClientService {
                     System.out.println("**ELIMINAR CLIENTE**");
                     deleteClient(input);
                     break;
+                case "6":
+                    System.out.println("Gracias por utilizar el sistema de FitZone");
+                    loop = false;
+                    break;
+                default:
+                    System.out.println("Ingrese una opcion correcta");
+                    break;
             }
-        }while(option != "6");
+        }while(loop);
     }
     
     public static void listClients(){
